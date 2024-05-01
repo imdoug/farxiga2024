@@ -10,6 +10,21 @@
     <title>Farxiga Interactive Screen</title>
     <style>
       /* GLOBAL */
+      p,h1,h2,h3,h4,h5,div,a, span{
+			-webkit-user-select: none; /* Safari */        
+		-moz-user-select: none; /* Firefox */
+		-ms-user-select: none; /* IE10+/Edge */
+		user-select: none; /* Standard */
+
+		}
+			
+		img {
+			-webkit-user-drag: none;
+			-khtml-user-drag: none;
+			-moz-user-drag: none;
+			-o-user-drag: none;
+			user-drag: none;
+		}
       .hidden {
         display: none;
         visibility: hidden;
@@ -14343,6 +14358,7 @@
         $('p.nofpatients').html(`${json[mid].percent_of_patients_on_SGLT2i}% of patients with CKD are on an SGLT2i<span>¶</span>`)
         $('#seeTheDiference').addClass('hidden')
         $('.disclose').toggleClass('hidden')
+        $('diclose').text('')
         //sendMess('See The Diferencedetail')
         // ANIMATION FADE IN 
         window.setTimeout(function(){$(".acm-lp").addClass('visible');}, 3000);
